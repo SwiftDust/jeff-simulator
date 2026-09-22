@@ -91,6 +91,7 @@
 [ext_resource type="Texture2D" uid="uid://gqmp7ca4vl3l" path="res://assets/lollipopWhiteGreen.png" id="93_oqmj5"]
 [ext_resource type="Script" uid="uid://b4pmuq00nbhbs" path="res://area_2d.gd" id="94_lwnsi"]
 [ext_resource type="Texture2D" uid="uid://c3wifopoeifad" path="res://assets/lollipopWhiteRed.png" id="94_uor2d"]
+[ext_resource type="PackedScene" uid="uid://dncj53bv0bp3r" path="res://finish.tscn" id="95_41lik"]
 [ext_resource type="Texture2D" uid="uid://c3kxuhjyvkitl" path="res://assets/waffleChoco.png" id="95_bdw5g"]
 [ext_resource type="Texture2D" uid="uid://bc3dflndanbgv" path="res://assets/wafflePink.png" id="96_j6smb"]
 [ext_resource type="Texture2D" uid="uid://bl5h35t4xud08" path="res://assets/waffleWhite.png" id="97_xp7cv"]
@@ -4688,6 +4689,7 @@ shape = SubResource("RectangleShape2D_53bls")
 position = Vector2(344, -661.5)
 scale = Vector2(1, 1.5285715)
 script = ExtResource("94_lwnsi")
+winscene = ExtResource("95_41lik")
 
 [node name="Heart" type="Sprite2D" parent="Area2D" unique_id=977129637]
 scale = Vector2(0.99999994, 0.99999994)
@@ -4706,3 +4708,4 @@ shape = SubResource("RectangleShape2D_lwnsi")
 [connection signal="body_entered" from="Hamburger6" to="Hamburger6" method="_on_body_entered"]
 [connection signal="body_entered" from="Hamburger7" to="Hamburger7" method="_on_body_entered"]
 [connection signal="body_entered" from="Hamburger8" to="Hamburger8" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
