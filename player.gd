@@ -1,10 +1,13 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -600.0
+@export var label: Node
+
+var SPEED = 300.0
+var JUMP_VELOCITY = -600.0
 
 var START_POS = position
+var weight = 75
 
 
 func _physics_process(delta: float) -> void:
@@ -29,3 +32,11 @@ func _physics_process(delta: float) -> void:
 		$Sprite2D.flip_h = true
 
 	move_and_slide()
+
+
+func add_weight():
+	weight += 1
+	JUMP_VELOCITY *= 1.05
+	SPEED *= 1.05
+	scale *= 1.05
+	label.text = "WEIGHT: %s kg" % weight
